@@ -69,7 +69,7 @@
 			for(i=0; i<length; i++) {
 				console.log(localData[i][0]);
 
-				block.append('<li><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet" href="'+tweet+'">Tweet</a></li>');
+				block.append('<li><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet" href="'+tweet+'"><i class="fa fa-twitter"></i> Ride with me!</a></li>');
 			}
 			block.appendTo(container);
 		}

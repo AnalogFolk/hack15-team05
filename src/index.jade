@@ -1,28 +1,43 @@
 doctype html
 html(lang="en")
-	
-		include partials/head
-	body
-		include partials/header
-		article(role='main', class='index-container')
-			section
-				div#trips
-				a(href='/new-trip.html') Add your trip!
+  
+    include partials/head
+  body
+    include partials/header
+    article(role='main', class='index-container')
+      section
+        div#trips
+        a(href='/new-trip.html') Add your trip!
 
-			if friends
-				section
-					h2 Friends
-						ul
-							each val in friends.length ? friends : ['No friends available']
-								li= val
-			else
-				p No friends yet!
-			if stats
-					section
-						h2 Stats
+      - var friends = [{name: 'Paul Smith',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'},{name: 'Mildred Stafford',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg'},{name: 'Justin Jackson',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg'},{name: 'Bianca Whitehead',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/128.jpg'}]
+      
+      if friends
+        section
+          .row
+            .col-md-6.col-md-offset-3
+              h2 Friends
+                each val in friends.length ? friends : ['No friends available']
+                  
+                  .row.user-item
+                    .col-xs-2.col-sm-2.text-center
+                      img.img-circle.img-responsive(src=val.image, alt='', width='50')
+                      |                     
+                    .col-xs-7.col-sm-7.section-box
+                      h4= val.name
+                    .col-xs-3.col-sm-3.text-center
+                      button.btn.btn-default(type='button', aria-label='Left Align')
+                        span Ping!
 
-				
 
-		include partials/footer
+      else
+        .col-md-6.col-md-offset-3.text-center
+          p No friends yet!
+      if stats
+          section
+            h2 Stats
+
+        
+
+    include partials/footer
 
 
