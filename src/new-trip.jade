@@ -11,19 +11,19 @@ html(lang="en")
             .form-group
               label(for='from') From
               |     
-              input#from.form-control(type='text', placeholder='From')
+              input#from.form-control(type='text', placeholder='From', name='origin')
             .form-group
               label(for='to') To
               |     
-              input#password.form-control(type='text', placeholder='To')
+              input#to.form-control(type='text', placeholder='To', name='destination')
               | 
             .form-group
               label(for='time') Time
               |     
-              input#time.form-control(type='text', placeholder='Time')
+              input#time.form-control(type='text', placeholder='Time', name='start-time')
               | 
             button.btn.btn-primary(type='submit') Save
-            
+
     include partials/footer
 
 
