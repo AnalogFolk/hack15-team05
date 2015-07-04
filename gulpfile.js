@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
-    less = require('gulp-less');
+    less = require('gulp-less'),
+    concat = require('gulp-concat');
 
 var EXPRESS_PORT = 4000;
 var EXPRESS_ROOT = 'dist';
@@ -60,10 +61,16 @@ gulp.task('styles', function(){
         plugins: [autoprefix, cleancss]
       }))
       .pipe(gulp.dest('dist/styles'));
-})
+});
+ 
+gulp.task('scripts', function() {
+  return gulp.src(['./src/js/jquery-2.1.4.min.js', './src/js/main.js'])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/js'));
+});
 
 // run this before you start your daily routine
-gulp.task('build', ['templates', 'styles']);
+gulp.task('build', ['templates', 'styles', 'scripts']);
 
 // I wanted to keep gulp tasks to minimal,
 // so if you end up in hundreds of files, this won't
@@ -77,6 +84,7 @@ gulp.task('default', function(){
     // watch changes for dev files
     gulp.watch('src/*.jade', ['templates']);
     gulp.watch('src/styles/*.less', ['styles']);
+    gulp.watch('src/js/*.js', ['scripts']);
 
     // when build changes, reload assets (not js!)
     gulp.watch('dist/*.html', notifyLivereload);
