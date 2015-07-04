@@ -13,24 +13,15 @@ By traveling with someone the perceived duration of the commute time decreases. 
 
 Additionally if you have to get home during the night > you might find other to share the ride and the taxi cost with. Also if disturbances/problems with your public transport finding others to share an alternative means of transport.
 
-###TO DO:
-
-* [ ] Facebook integration // Login // Getting interests from FB
-* [ ] 4 Screens html & CSS
-* [ ] Send user ID & travel details to backend
-* [ ] Get back users // Store in JSON
-* [ ] Boilerplate
-
-##Technology
+##Team
 
 
 
-![Andrea Usseglio Gaudi](https://pbs.twimg.com/profile_images/1599369214/312a6f2_400x400.jpg)  | ![Viktor Lövgren](https://pbs.twimg.com/profile_images/528837541282054144/pAWNnqjc_400x400.jpeg)  | ![Des Holmes](https://avatars3.githubusercontent.com/u/3582841?v=3&s=100)
+![Andrea Usseglio Gaudi](https://pbs.twimg.com/profile_images/1599369214/312a6f2_400x400.jpg)  | ![Viktor Lövgren](https://pbs.twimg.com/profile_images/528837541282054144/pAWNnqjc_400x400.jpeg)  | ![Anni Vaananen](https://pbs.twimg.com/profile_images/549519699172536320/2em_2juW_reasonably_small.jpeg) | ![Sandra Szenti](https://pbs.twimg.com/profile_images/565627321705447424/H08zMXfi_400x400.jpeg)
 :--- | :--- | :---
-**Andrea Usseglio Gaudi ** | **Ben Bishop** | **John Kilpatrick**
-[@Andrea_Usseglio](https://twitter.com/Andrea_Usseglio) | [@vlovgr](https://twitter.com/vlovgr) | [@jjkilpatrick](https://twitter.com/jjkilpatrick)
-[desholmes](https://github.com/desholmes) | [https://github.com/bish0p86](https://github.com/bish0p86) | [jjkilpatrick](https://github.com/jjkilpatrick)
-[http://dholmes.co.uk/](http://dholmes.co.uk/) |  | [https://medium.com/@jjkilpatrick](https://medium.com/@jjkilpatrick)
+**Andrea Usseglio Gaudi** | **Ben Bishop** | **Anni Vaananen** | **Sandra Szenti**
+[@Andrea_Usseglio](https://twitter.com/Andrea_Usseglio) | [@vlovgr](https://twitter.com/vlovgr) | [@anni_vaananen](https://twitter.com/anni_vaananen) | [@whatevertechno](https://twitter.com/whatevertechno)
+
 
 **Brief description of your hack**
 
