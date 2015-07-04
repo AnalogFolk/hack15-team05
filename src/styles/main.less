@@ -1,6 +1,7 @@
 @import "node_modules/normalize.less/normalize.less";
 
 @primary-color : #2c3e50;
+@secondary-color: #FE5F55;
 
 
 h1 {
@@ -8,15 +9,12 @@ h1 {
 	color: #cb6e12;
 	padding: 0.4em;
 }
-
-
 .index-container {
 
 	section:first-child {
-		background: #5bc0de;
 		color: #fff;
 		
-		a {
+		/*a {
 			display: block;
 			box-sizing: border-box;
 			width: 100%;
@@ -31,7 +29,7 @@ h1 {
 				background: lighten(#5bc0de, 38%);
 				color: lighten(#18bc9c, 15%);
 			}
-		}
+		}*/
 	}
 
 	section {
@@ -88,30 +86,17 @@ h1 {
   width:100%;
 }
 
+button, .btn.btn-default {
+	background-color: @secondary-color;
 
-#trips {
-	ul {
-		padding-left: 0;
-
-		li {
-			list-style: none;
-			background: #fff;
-			
-			a {
-				display: inline-block;
-				box-sizing: border-box;
-				width: 70%;
-				vertical-align: top;
-
-				&:last-child {
-					display: inline-block;
-					width: 29%;
-				}
-			}
-		}
+	&:hover, &:focus {
+		background-color: lighten(@secondary-color, 10%);
 	}
 }
 
+.tweet.secondary-content {
+	text-decoration: none;
+}
 
 .notification {
   position:absolute;

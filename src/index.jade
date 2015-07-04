@@ -28,9 +28,10 @@ html(lang="en")
 
 
     article(role='main', class='index-container')
-      section
+      section.lime
+        h3 My trips
         div#trips
-        a(href='/new-trip.html') Add your trip!
+        a(class='btn btn-default btn-big', href='/new-trip.html') Add your trip!
 
       - var friends = [{name: 'Paul Smith',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'},{name: 'Mildred Stafford',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/jadlimcaco/128.jpg'},{name: 'Justin Jackson',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg'},{name: 'Bianca Whitehead',image: 'https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/128.jpg'}]
       
@@ -38,17 +39,13 @@ html(lang="en")
         section
           .row
             .col-md-6.col-md-offset-3
-              h2 Friends
+              h3 Friends
+              ul.collection
                 each val in friends.length ? friends : ['No friends available']
-                  
-                  .row.user-item
-                    .col-xs-2.col-sm-2.text-center
-                      img.img-circle.img-responsive(src=val.image, alt='', width='50')
-                      |                     
-                    .col-xs-7.col-sm-7.section-box
-                      h4= val.name
-                    .col-xs-3.col-sm-3.text-center
-                      button.btn.btn-default(type='button', aria-label='Left Align')
+                  li.row.user-item.collection-item.avatar
+                    img.img-circle.circle.img-responsive(src=val.image, alt='', width='50')
+                    p= val.name
+                    button.btn.secondary-content.btn-default(type='button', aria-label='Left Align')
                         span Ping!
 
 
