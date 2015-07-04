@@ -7,18 +7,31 @@ html(lang="en")
     .container
       .row
         .col-md-4.col-md-offset-4
-          form
-            .form-group
-                label(for='username') Username
-                |     
-                input#username.form-control(type='text', placeholder='Username')
-                |   
-              .form-group
-                label(for='password') Password
-                |     
-                input#password.form-control(type='password', placeholder='Password')
-                |   
-              button.btn.btn-primary(type='submit') Login
+          form.login-form
+            .row
+              .col-md-12
+                h3 Login using
+                .social-buttons
+                  a.btn.btn-fb(href='#')
+                    i.fa.fa-facebook
+                    |  Facebook
+                  a.btn.btn-tw(href='#')
+                    i.fa.fa-twitter
+                    |  Twitter
+                h3 or
+                form#login-nav.form(role='form', method='post', action='login', accept-charset='UTF-8')
+                  .form-group
+                    label.sr-only(for='exampleInputEmail2') Email address
+                    input#exampleInputEmail2.form-control(type='email', placeholder='Email address', required='')
+                  .form-group
+                    label.sr-only(for='exampleInputPassword2') Password
+                    input#exampleInputPassword2.form-control(type='password', placeholder='Password', required='')
+                    |                                              
+                    .help-block.text-right
+                      a(href='') Forgot the password?
+                  .form-group
+                    button.btn.btn-primary.btn-block(type='submit') Sign in
+                  
 
     include partials/footer
 
