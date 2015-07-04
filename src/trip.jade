@@ -13,33 +13,17 @@ html(lang="en")
       .row
         .col-md-10.col-md-offset-1
 
-          h1 People to travel with:
+          h3 Traveling with you
 
-          - var values = [{name: 'Khaleesi', image: '/images/khaleesi.jpg'},{name: 'John Snow', image: '/images/snow.jpg'},{name: 'Tyrion Lannister',  image: 'images/tyrion.jpg'}]
-
-          for value in values
-            .row.user-item
-              .col-xs-12.col-sm-3.text-center
-                img.img-circle.img-responsive(src=value.image, alt='')
-                |                     
-              .col-xs-9.col-sm-6.section-box
-                h2= value.name
-                |                         
-                p
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel placeat animi, sint eum?
-                .row.rating-desc
-                  .col-md-12
-                    br
-                    span.glyphicon.glyphicon-heart
-                    span.glyphicon.glyphicon-heart
-                    span.glyphicon.glyphicon-heart
-                    span.glyphicon.glyphicon-heart
-                    span.glyphicon.glyphicon-heart
-
-              .col-xs-3.col-sm-3.text-center
-                button.btn.btn-default(type='button', aria-label='Left Align')
-                  span Ping!
-
+          - var values = [{name: 'Khaleesi', image: '/images/khaleesi.jpg', time:'8'},{name: 'John Snow', image: '/images/snow.jpg', time:'13'},{name: 'Tyrion Lannister',  image: 'images/tyrion.jpg', time:'21'}]
+          ul.collection
+              each val in values.length ? values : ['No friends available']
+                li.row.user-item.collection-item.avatar
+                  img.img-circle.circle.img-responsive(src=val.image, alt='', width='50')
+                  p= val.name
+                  p= val.time+' more minutes on the same route'
+                  button.btn.secondary-content.btn-default(type='button', aria-label='Left Align')
+                      span Hey!
 
     include partials/footer
 

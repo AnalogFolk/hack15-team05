@@ -7,23 +7,24 @@ html(lang="en")
     
 
       .row.notification.ping
-        .col.s6.offset-s3
-          .card.blue-grey.darken-1
+        .col.s12
+          .card.blue-grey.darken-1.z-depth-2
             .card-content.white-text
-              .card-title You received a Ping!
-              p  Lorem ipsum dolor sit amet, consectetur.
+              .card-title.avatar You received a Hey!
+              img.img-circle.circle.img-responsive.left-align(src='https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg', alt='', width='90')
+              p.left-align <strong>Justin Jackson</strong> would like to talk to you. Are you in the mood for a chat?
             .card-action
-              a(href='/') Meet me!
+              a.lime-text(href='/') Meet me
               a.close-notification(href='/') Close
 
       .row.notification.disruption
-        .col.s6.offset-s3
-          .card.blue-grey.darken-1
+        .col.s12
+          .card.blue-grey.darken-1.z-depth-2
             .card-content.white-text
-              .card-title ohh No!
-              p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero fugiat adipisci alias velit sed, distinctio.
+              .card-title Ohh no!
+              p <strong>Paddington Station</strong> has been closed due to accident. Catch a cab instead to still make it on time!
             .card-action
-              a(href='/') Find a ???
+              a.lime-text(href='/') Share a cab
               a.close-notification(href='/') Close
 
 
@@ -46,7 +47,7 @@ html(lang="en")
                     img.img-circle.circle.img-responsive(src=val.image, alt='', width='50')
                     p= val.name
                     button.btn.secondary-content.btn-default(type='button', aria-label='Left Align')
-                        span Ping!
+                        span Hey!
 
 
       else
