@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  
+    include partials/head
+  body
+    include partials/header
+    article(role='main', class='index-container')
+      section.lime
+        div
+          a(class='btn btn-default btn-big', href='/') Back to trips
+
+    .container
+      .row
+        .col-md-10.col-md-offset-1
+
+          h3 Traveling with you
+
+          - var values = [{name: 'Khaleesi', image: '/images/khaleesi.jpg', time:'8'},{name: 'John Snow', image: '/images/snow.jpg', time:'13'},{name: 'Tyrion Lannister',  image: 'images/tyrion.jpg', time:'21'}]
+          ul.collection
+              each val in values.length ? values : ['No friends available']
+                li.row.user-item.collection-item.avatar
+                  img.img-circle.circle.img-responsive(src=val.image, alt='', width='50')
+                  p= val.name
+                  p= val.time+' more minutes on the same route'
+                  button.btn.secondary-content.btn-default(type='button', aria-label='Left Align')
+                      span Hey!
+
+    include partials/footer
+
+
