@@ -20,12 +20,11 @@
 		geocoder.geocode( { 'address': address}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
 				console.log(results[0].geometry.location);
-				$.get('https://api.what3words.com/position?key=UGYLI1D1&lang=en&position=51.521251,-0.203586', function( data ) {
+				$.get('https://api.what3words.com/position?key=UGYLI1D1&lang=en&position='+results[0].geometry.location.A +','+results[0].geometry.location.F, function( data ) {
 					console.log(data.words);
-					formData.push(data.words);
-				});
+					formData.push(data.words[0]+ ' ' + data.words[1]+ ' ' + data.words[2]);
 
-				if(currentStorage.trips) {
+					if(currentStorage.trips) {
 					console.log('hello');
 					console.log(formData);
 					allTrips = JSON.parse(currentStorage.getItem('trips'));
@@ -33,15 +32,19 @@
 					allTrips.push(formData);
 					
 
-				} else {
-					allTrips = [formData];
-					console.log('else');
-					console.log(formData);
-				}
+					} else {
+						allTrips = [formData];
+						console.log('else');
+						console.log(formData);
+					}
 
-				localStorage.setItem('trips', JSON.stringify(allTrips));
+					localStorage.setItem('trips', JSON.stringify(allTrips));
+					window.location.href = 'http://localhost:4000/';
+				});
 
-				window.location.href = 'http://localhost:4000/';
+				
+
+				
 			} else {
 				console.log('Google Geocoding has failed: ' + status);
 			}
@@ -55,15 +58,23 @@
 		var container = $('#trips'),
 			block = $('<ul class="collection"></ul>'),
 			localData = localStorage.getItem('trips'),
+			words = '',
 			tweet = 'http://twitter.com/share?url=false&text=' + encodeURIComponent('#RideWithMe to \'index home raft\' via @what3words'),
 			length, i;
 
+
 		if(container.length > 0 && localData && localData.length > 0) {
 			localData = JSON.parse(localData);
+
+			console.log(localData);
 			length = localData.length;
 			for(i=0; i<length; i++) {
 				console.log(localData[i][0]);
+				words = localData[i][3];
+				console.log('what 3 words', words);
+				tweet = 'http://twitter.com/share?url=false&text=' + encodeURIComponent('#RideWithMe to \''+ words +'\' via @what3words #AFHackFestival');
 
+				
 				block.append('<li class="collection-item"><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet secondary-content" href="'+tweet+'"><i class="fa fa-twitter"></i> Ride with me!</a></li>');
 			}
 			block.appendTo(container);
