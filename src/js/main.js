@@ -1,11 +1,11 @@
 (function($, window, undefined){
-	var tripSave, localData, $window;
+	var saveTrip, localData, $window;
 
 	$window = $('window');
 
 	localData= localStorage;
 	
-	tripSave = function(e){
+	saveTrip = function(e){
 		e.preventDefault();
 		console.log(e);
 		var formData = $(e.currentTarget).serializeArray(),
@@ -20,6 +20,10 @@
 		geocoder.geocode( { 'address': address}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
 				console.log(results[0].geometry.location);
+				$.get('https://api.what3words.com/position?key=UGYLI1D1&lang=en&position=51.521251,-0.203586', function( data ) {
+					console.log(data.words);
+					formData.push(data.words);
+				});
 
 				if(currentStorage.trips) {
 					console.log('hello');
@@ -27,20 +31,22 @@
 					allTrips = JSON.parse(currentStorage.getItem('trips'));
 					console.log('allTrips', allTrips);
 					allTrips.push(formData);
-					localStorage.setItem('trips', JSON.stringify(allTrips));
+					
 
 				} else {
 					allTrips = [formData];
 					console.log('else');
 					console.log(formData);
-					currentStorage.setItem('trips', JSON.stringify(allTrips));
-					console.log(currentStorage.getItem('trips'));
 				}
+
+				localStorage.setItem('trips', JSON.stringify(allTrips));
 				// localData.destination =  {
 				// 	address: address,
 				// 	latitude: results[0].geometry.location.A,
 				// 	longitude: results[0].geometry.location.F
 				// }
+
+				window.location.href = 'http://localhost:4000/';
 			} else {
 				console.log('Google Geocoding has failed: ' + status);
 			}
@@ -52,7 +58,9 @@
 	};
 	addTrips = function() {
 		var container = $('#trips'),
+			block = $('<ul></ul>'),
 			localData = localStorage.getItem('trips'),
+			tweet = 'http://twitter.com/share?text=RideWithMe to index home raft via w3w',
 			length, i;
 
 		if(container.length > 0 && localData.length > 0) {
@@ -61,13 +69,13 @@
 			for(i=0; i<length; i++) {
 				console.log(localData[i][0]);
 
-				container.append('<a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a>');
+				block.append('<li><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet" href="'+tweet+'">Tweet</a></li>');
 			}
-
+			block.appendTo(container);
 		}
 	}
 
-	$('#create-trip').on('submit', function(e){tripSave(e);});
+	$('#create-trip').on('submit', function(e){saveTrip(e);});
 
 	addTrips();
 
