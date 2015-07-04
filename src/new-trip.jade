@@ -6,9 +6,9 @@ html(lang="en")
     include partials/header
 
     article(role='main', class='index-container')
-      section
+      section.lime
         div
-          a(href='/') Back
+          a(class='btn btn-default btn-big', href='/') Back to trips
     
     .container
       .row
@@ -28,7 +28,7 @@ html(lang="en")
               |     
               input#time.form-control(type='time', placeholder='Time', name='start-time')
               | 
-            button.btn.btn-primary.btn-big(type='submit') Save
+            button.btn.btn-default.btn-big(type='submit') Save
 
     include partials/footer
 

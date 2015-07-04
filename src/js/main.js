@@ -40,11 +40,6 @@
 				}
 
 				localStorage.setItem('trips', JSON.stringify(allTrips));
-				// localData.destination =  {
-				// 	address: address,
-				// 	latitude: results[0].geometry.location.A,
-				// 	longitude: results[0].geometry.location.F
-				// }
 
 				window.location.href = 'http://localhost:4000/';
 			} else {
