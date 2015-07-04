@@ -18,10 +18,6 @@ Additionally if you have to get home during the night > you might find other to 
 
 
 ![Andrea Usseglio Gaudi](https://pbs.twimg.com/profile_images/1599369214/312a6f2_400x400.jpg)  | ![Viktor Lövgren](https://pbs.twimg.com/profile_images/528837541282054144/pAWNnqjc_400x400.jpeg)  | ![Anni Vaananen](https://pbs.twimg.com/profile_images/549519699172536320/2em_2juW_reasonably_small.jpeg) | ![Sandra Szenti](https://pbs.twimg.com/profile_images/565627321705447424/H08zMXfi_400x400.jpeg)
-:--- | :--- | :---
-**Andrea Usseglio Gaudi** | **Ben Bishop** | **Anni Vaananen** | **Sandra Szenti**
-[@Andrea_Usseglio](https://twitter.com/Andrea_Usseglio) | [@vlovgr](https://twitter.com/vlovgr) | [@anni_vaananen](https://twitter.com/anni_vaananen) | [@whatevertechno](https://twitter.com/whatevertechno)
-
 
 **Brief description of your hack**
 
