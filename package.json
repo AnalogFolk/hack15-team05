@@ -2,15 +2,14 @@
   "name": "express-boiler",
   "version": "0.0.1",
   "description": "Boilerplate with express, gulp and others.",
-  "keywords": "jade, gulp, express, node, less, live reload, template, boilerplate",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
   "keywords": [
     "express",
     "gulp"
   ],
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
   "author": "Sandra Szenti",
   "license": "ISC",
   "dependencies": {
@@ -25,5 +24,8 @@
     "less-plugin-clean-css": "^1.5.0",
     "normalize.less": "^1.0.0",
     "tiny-lr": "^0.1.5"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0"
   }
 }
