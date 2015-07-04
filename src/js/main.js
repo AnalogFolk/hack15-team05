@@ -53,18 +53,18 @@
 	};
 	addTrips = function() {
 		var container = $('#trips'),
-			block = $('<ul></ul>'),
+			block = $('<ul class="collection"></ul>'),
 			localData = localStorage.getItem('trips'),
 			tweet = 'http://twitter.com/share?url=false&text=' + encodeURIComponent('#RideWithMe to \'index home raft\' via @what3words'),
 			length, i;
 
-		if(container.length > 0 && localData.length > 0) {
+		if(container.length > 0 && localData && localData.length > 0) {
 			localData = JSON.parse(localData);
 			length = localData.length;
 			for(i=0; i<length; i++) {
 				console.log(localData[i][0]);
 
-				block.append('<li><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet" href="'+tweet+'"><i class="fa fa-twitter"></i> Ride with me!</a></li>');
+				block.append('<li class="collection-item"><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet secondary-content" href="'+tweet+'"><i class="fa fa-twitter"></i> Ride with me!</a></li>');
 			}
 			block.appendTo(container);
 		}
@@ -73,8 +73,6 @@
 	$('#create-trip').on('submit', function(e){saveTrip(e);});
 
 	addTrips();
-
-
 
 	
 }(jQuery, window));
