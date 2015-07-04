@@ -39,7 +39,7 @@
 					}
 
 					localStorage.setItem('trips', JSON.stringify(allTrips));
-					window.location.href = 'http://localhost:4000/';
+					window.location.href = 'http://analogfolk.github.io/hack15-team05/dist/';
 				});
 
 				
