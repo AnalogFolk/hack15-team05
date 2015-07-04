@@ -15,14 +15,14 @@ html(lang="en")
 
           h3 Traveling with you
 
-          - var values = [{name: 'Khaleesi', image: '/images/khaleesi.jpg', time:'8'},{name: 'John Snow', image: '/images/snow.jpg', time:'13'},{name: 'Tyrion Lannister',  image: 'images/tyrion.jpg', time:'21'}]
+          - var values = [{name: 'Khaleesi', image: 'images/khaleesi.jpg', time:'8'},{name: 'John Snow', image: 'images/snow.jpg', time:'13'},{name: 'Tyrion Lannister',  image: 'images/tyrion.jpg', time:'21'}]
           ul.collection
               each val in values.length ? values : ['No friends available']
                 li.row.user-item.collection-item.avatar
                   img.img-circle.circle.img-responsive(src=val.image, alt='', width='50')
                   p= val.name
                   p= val.time+' more minutes on the same route'
-                  button.btn.secondary-content.btn-default(type='button', aria-label='Left Align')
+                  button.btn.btn-default.btn-big(type='button', aria-label='Left Align')
                       span Hey!
 
     include partials/footer
