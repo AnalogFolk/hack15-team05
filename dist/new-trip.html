@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-A-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en-gb">
+    <title>no name</title>
+    <meta name="description" content="Replace description here.">
+    <meta author="Your name here">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/all.js" defer="true"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css" rel="stylesheet">
+  </head>
+</html>
+<body>
+  <article role="main" class="index-container">
+    <section class="lime">
+      <div><a href="/" class="btn btn-default btn-big">Back to trips</a></div>
+    </section>
+  </article>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <form id="create-trip">
+          <div class="form-group">
+            <label for="from">From</label>    
+            <input id="from" type="text" placeholder="From" name="origin" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="to">To</label>    
+            <input id="to" type="text" placeholder="To" name="destination" class="form-control"> 
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>    
+            <input id="time" type="time" placeholder="Time" name="start-time" class="form-control"> 
+          </div>
+          <button type="submit" class="btn btn-default btn-big">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
