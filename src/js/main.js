@@ -72,7 +72,7 @@
 				console.log(localData[i][0]);
 				words = localData[i][3];
 				console.log('what 3 words', words);
-				tweet = 'http://twitter.com/share?url=false&text=' + encodeURIComponent('#RideWithMe to \''+ words +'\' via @what3words');
+				tweet = 'http://twitter.com/share?url=false&text=' + encodeURIComponent('#RideWithMe to \''+ words +'\' via @what3words #AFHackFestival');
 
 				
 				block.append('<li class="collection-item"><a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a><a class="tweet secondary-content" href="'+tweet+'"><i class="fa fa-twitter"></i> Ride with me!</a></li>');
