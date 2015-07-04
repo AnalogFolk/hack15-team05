@@ -4,10 +4,32 @@ html(lang="en")
 		include partials/head
 	body
 		include partials/header
+		script(type='text/javascript').
+			var i, friends = [], trips;
+			for(i=0; i < 10; i++) {
+
+			}
 	
+		article(role='main', class='index-container')
+			section
+				if trips
+					p list your trips
+				else
+					a(href='/new-trip.html') Add your first trip
 
-		
+			if friends
+				section
+					h2 Friends
+						ul
+							each val in friends.length ? friends : ['No friends available']
+								li= val
+			else
+				p No friends yet!
+			if stats
+					section
+						h2 Stats
 
+				
 
 		include partials/footer
 

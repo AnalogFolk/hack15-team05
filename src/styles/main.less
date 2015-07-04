@@ -5,3 +5,32 @@ h1 {
 	color: #cb6e12;
 	padding: 0.4em;
 }
+
+.index-container {
+
+	section:first-child {
+		background: #5bc0de;
+		color: #fff;
+		
+		a {
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			background: #fff;
+			padding: 0.6em;
+			text-decoration: none;
+			text-align: center;
+			font-size: 1.2em;
+			letter-spacing: 0.04em;
+
+			&:hover, &:focus {
+				background: lighten(#5bc0de, 38%);
+				color: lighten(#18bc9c, 15%);
+			}
+		}
+	}
+
+	section {
+		padding: 1.6em 1.2em;
+	}
+}

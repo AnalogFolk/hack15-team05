@@ -25,10 +25,10 @@ Additionally if you have to get home during the night > you might find other to 
 
 
 
-![Des Holmes](https://avatars3.githubusercontent.com/u/1830123?v=3&s=100)  | ![Des Holmes](https://avatars3.githubusercontent.com/u/1517766?v=3&s=100)  | ![Des Holmes](https://avatars3.githubusercontent.com/u/3582841?v=3&s=100)
+![Andrea Usseglio Gaudi](https://pbs.twimg.com/profile_images/1599369214/312a6f2_400x400.jpg)  | ![Viktor Lövgren](https://pbs.twimg.com/profile_images/528837541282054144/pAWNnqjc_400x400.jpeg)  | ![Des Holmes](https://avatars3.githubusercontent.com/u/3582841?v=3&s=100)
 :--- | :--- | :---
-**Des Holmes** | **Ben Bishop** | **John Kilpatrick**
-[@whodadada](https://twitter.com/whodadada) | [@BenBish0p](https://twitter.com/BenBish0p) | [@jjkilpatrick](https://twitter.com/jjkilpatrick)
+**Andrea Usseglio Gaudi ** | **Ben Bishop** | **John Kilpatrick**
+[@Andrea_Usseglio](https://twitter.com/Andrea_Usseglio) | [@vlovgr](https://twitter.com/vlovgr) | [@jjkilpatrick](https://twitter.com/jjkilpatrick)
 [desholmes](https://github.com/desholmes) | [https://github.com/bish0p86](https://github.com/bish0p86) | [jjkilpatrick](https://github.com/jjkilpatrick)
 [http://dholmes.co.uk/](http://dholmes.co.uk/) |  | [https://medium.com/@jjkilpatrick](https://medium.com/@jjkilpatrick)
 
