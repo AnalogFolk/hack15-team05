@@ -15,6 +15,8 @@
 			allTrips,
 			currentTrip;
 
+			console.log(address);
+
 		geocoder.geocode( { 'address': address}, function(results, status) {
 			if (status == google.maps.GeocoderStatus.OK) {
 				console.log(results[0].geometry.location);
@@ -23,7 +25,9 @@
 					console.log('hello');
 					console.log(formData);
 					allTrips = JSON.parse(currentStorage.getItem('trips'));
-					console.log(currentStorage.getItem('trips'));
+					console.log('allTrips', allTrips);
+					allTrips.push(formData);
+					localStorage.setItem('trips', JSON.stringify(allTrips));
 
 				} else {
 					allTrips = [formData];
@@ -46,11 +50,26 @@
 		}
 		
 	};
+	addTrips = function() {
+		var container = $('#trips'),
+			localData = localStorage.getItem('trips'),
+			length, i;
 
+		if(container.length > 0 && localData.length > 0) {
+			localData = JSON.parse(localData);
+			length = localData.length;
+			for(i=0; i<length; i++) {
+				console.log(localData[i][0]);
+
+				container.append('<a href="trip.html">' + localData[i][0].value + ' - ' + localData[i][1].value  + '</a>');
+			}
+
+		}
+	}
 
 	$('#create-trip').on('submit', function(e){tripSave(e);});
 
-
+	addTrips();
 
 
 
