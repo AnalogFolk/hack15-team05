@@ -55,7 +55,7 @@
 		var container = $('#trips'),
 			block = $('<ul></ul>'),
 			localData = localStorage.getItem('trips'),
-			tweet = 'http://twitter.com/share?text=RideWithMe to index home raft via w3w',
+			tweet = 'http://twitter.com/share?url=false&text=' + encodeURIComponent('#RideWithMe to \'index home raft\' via @what3words'),
 			length, i;
 
 		if(container.length > 0 && localData.length > 0) {
@@ -79,3 +79,35 @@
 	
 }(jQuery, window));
 
+
+
+
+
+var notifications = (function() {
+	'use strict';
+
+	var notifications = {
+
+		init : function() {
+
+			$(window).keypress(function( event ) {
+  			if (event.which==112) {notifications.showPing();}
+     		else if (event.which==100) {notifications.showDisruption();}
+  		});
+
+  		$('.close-notification').on('click', function(e) {
+  			e.preventDefault();
+  			$('.notification').fadeOut(400);
+  		});
+		},
+		showPing : function() {
+			$('.notification.ping').fadeIn(400);
+		},
+		showDisruption : function() {
+			$('.notification.disruption').fadeIn(400);
+		}
+	};
+
+	return notifications;
+}());
+notifications.init();
