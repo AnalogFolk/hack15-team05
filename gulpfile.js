@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     jade = require('gulp-jade'),
     less = require('gulp-less'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    plumber = require('gulp-plumber');
+
 
 var EXPRESS_PORT = 4000;
 var EXPRESS_ROOT = 'dist';
@@ -44,6 +46,7 @@ function notifyLivereload(event) {
 // takes jade files and compiles them into HTML
 gulp.task('templates', function(){
     return gulp.src('src/*.jade')
+    .pipe(plumber())
     .pipe(jade({pretty: true}))
     .pipe(gulp.dest('dist/'));
 });
@@ -57,6 +60,7 @@ gulp.task('styles', function(){
         autoprefix= new LessPluginAutoPrefix({ browsers: ['last 2 versions'] });
 
     return gulp.src('src/styles/*.less')
+      .pipe(plumber())
       .pipe(less({
         plugins: [autoprefix, cleancss]
       }))
